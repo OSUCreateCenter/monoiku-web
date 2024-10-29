@@ -1,0 +1,17 @@
+・color
+#a6beb3 (薄い緑)
+#13623e (緑)
+rgb(219, 214, 206) (灰色っぽい)
+ ()
+
+
+・html
+index
+monoiku
+active
+news
+FAQ
+
+写真サイズ
+
+
