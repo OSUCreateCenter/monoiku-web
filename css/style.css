@@ -351,12 +351,13 @@ margin:0 5px;
 
 .mokuji{
   background-color: #bce7d3;
-  width: 280px;
+  width: 40%;
   padding: 17px 8px;
   border-radius: 12px;
   text-align: center;
   display: inline-block;
   margin-bottom: 40px;
+  font-size: 1.3em;
 }
 
 .mokuji li{
