@@ -8,6 +8,10 @@
         font-size: 2.5rem;
     }
 
+    .header-links {
+        display: inline;
+    }
+
     /* index.html==============================↓ */
 }
 
