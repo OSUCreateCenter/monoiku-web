@@ -1,0 +1,55 @@
+@media screen and (max-width: 480px) {
+    /* ここにスマホ版だけの記述 */
+    html {
+        font-size: 1rem;
+    }
+
+    header h1{
+        font-size: 2rem;
+        margin: 30px 0 15px 0;
+    }
+
+    header a{
+        display: inline-block;
+    }
+
+    .header-links {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .header-links a{
+        margin: 5px 0;
+        width: 50%;
+        line-height: normal;
+    }
+
+
+    /* index.html==============================↓ */
+
+}
+
+
+@media screen and (max-width: 720px) {
+    /* ここにindexのNote,balloon周り用の記述 */
+    .note {
+        width: 80%;
+    }
+
+    .btn2 {
+        font-size: 3.5vw;
+    }
+
+    .balloon .faceicon {
+        width: 20%;
+    }
+
+    .chatting {
+        width: 80%;
+    }
+
+    .says {
+        width: 90%;
+    }
+}
