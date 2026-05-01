@@ -3,7 +3,7 @@
 
 html{
   margin:0;
-  padding:0
+  padding:0;
 }
 
 main{
@@ -13,7 +13,13 @@ main{
 body{
   text-align: center;
   margin: 0;
-  background-image: url(../img/css-image/main-haikei.jpg);
+  background-image: url(../img/css-image/main-haikei.jpg); 
+}
+
+body.monoiku{
+  text-align: center;
+  margin: 0;
+  background-image: url(../img/css-image/monoiku-haikei.jpg); 
 }
 
 header{
@@ -21,12 +27,14 @@ header{
   padding: 1%;
   }
 
+  /* ヘッダーリンク部分 */
   header a{
     color: #333;
     margin: 10px;
     font-size: 1.6rem;
   }
 
+  /* ヘッダータイトル */
   header h1{
     color: #000000;
     font-size: 2.5rem;
@@ -40,18 +48,20 @@ footer{
   background-image: url(../img/css-image/hed-haikei.jpg);
   }
 
+  /* フッターリンク部分 */
   footer a{
     color: #333;
     margin: 10px;
   }
 
 
+/* PAGETOP */
 /*リンクの形状*/
 #page-top a{
 	display: flex;
 	justify-content:center;
 	align-items:center;
-	background:#13623e;
+	background:#e9e6e1;
 	border-radius: 5px;
 	width: 130px;
 	height: 130px;
@@ -79,7 +89,6 @@ footer{
   }
 
   /*　上に上がる動き　*/
-
   #page-top.UpMove{
     animation: UpAnime 0.5s forwards;
   }
@@ -95,7 +104,6 @@ footer{
   }
 
   /*　下に下がる動き　*/
-
   #page-top.DownMove{
     animation: DownAnime 0.5s forwards;
   }
@@ -121,26 +129,82 @@ h2{
 
 /* index.html==============================↓ */
 
+/* 画像スライドショー */
+  /* 画像部分 */
+  .slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
+    width:94%;
+    margin: 30px auto;
+    }
 
-.slider {/*横幅94%で左右に余白を持たせて中央寄せ*/
-  width:94%;
-  margin: 30px auto;
-  }
+    .slider img {
+      width:60vw;
+    }
 
-  .slider img {
-    width:60vw;
-  }
+    .slider .slick-slide {
+    transform: scale(0.8);/*左右の画像のサイズを80%に*/
+    transition: all .5s;/*拡大や透過のアニメーションを0.5秒で行う*/
+    opacity: 0.5;/*透過50%*/
+    }
 
-  .slider .slick-slide {
-  transform: scale(0.8);/*左右の画像のサイズを80%に*/
-  transition: all .5s;/*拡大や透過のアニメーションを0.5秒で行う*/
-  opacity: 0.5;/*透過50%*/
-  }
+    .slider .slick-slide.slick-center{
+    transform: scale(1);/*中央の画像のサイズだけ等倍に*/
+    opacity: 1;/*透過なし*/
+    }
 
-  .slider .slick-slide.slick-center{
-  transform: scale(1);/*中央の画像のサイズだけ等倍に*/
-  opacity: 1;/*透過なし*/
-  }
+
+  /*矢印の設定*/
+
+  /*戻る、次へ矢印の位置*/
+  .slick-prev,
+  .slick-next {
+    position: absolute;/*絶対配置にする*/
+    top: 42%;
+    cursor: pointer;/*マウスカーソルを指マークに*/
+    outline: none;/*クリックをしたら出てくる枠線を消す*/
+    border-top: 2px solid #666;/*矢印の色*/
+    border-right: 2px solid #666;/*矢印の色*/
+    height: 15px;
+    width: 15px;
+    }
+
+    .slick-prev {/*戻る矢印の位置と形状*/
+      left: -1.5%;
+      transform: rotate(-135deg);
+    }
+
+    .slick-next {/*次へ矢印の位置と形状*/
+      right: -1.5%;
+      transform: rotate(45deg);
+    }
+
+    /*ドットナビゲーションの設定*/
+    .slick-dots {
+      text-align:center;
+    margin:20px 0 0 0;
+    }
+
+    .slick-dots li {
+      display:inline-block;
+    margin:0 5px;
+    }
+
+    .slick-dots button {
+      color: transparent;
+      outline: none;
+      width:4px;/*ドットボタンのサイズ*/
+      height:12px;/*ドットボタンのサイズ*/
+      display:block;
+      border-radius:50%;
+      background:#e7e3db;/*ドットボタンの色*/
+    }
+
+    .slick-dots .slick-active button{
+      background:#5f4626;/*ドットボタンの現在地表示の色*/
+    }
+
+/* 画像スライドショー終わり */
+
+  
 
 .note {
   background-color: #f2f0de; /* 背景色 */
@@ -160,56 +224,6 @@ h2{
     font-size: 1.3rem;
   }
 
-
-/*矢印の設定*/
-
-/*戻る、次へ矢印の位置*/
-.slick-prev,
-.slick-next {
-  position: absolute;/*絶対配置にする*/
-  top: 42%;
-  cursor: pointer;/*マウスカーソルを指マークに*/
-  outline: none;/*クリックをしたら出てくる枠線を消す*/
-  border-top: 2px solid #666;/*矢印の色*/
-  border-right: 2px solid #666;/*矢印の色*/
-  height: 15px;
-  width: 15px;
-  }
-
-  .slick-prev {/*戻る矢印の位置と形状*/
-    left: -1.5%;
-    transform: rotate(-135deg);
-  }
-
-  .slick-next {/*次へ矢印の位置と形状*/
-    right: -1.5%;
-    transform: rotate(45deg);
-  }
-
-  /*ドットナビゲーションの設定*/
-  .slick-dots {
-    text-align:center;
-  margin:20px 0 0 0;
-  }
-
-  .slick-dots li {
-    display:inline-block;
-  margin:0 5px;
-  }
-
-  .slick-dots button {
-    color: transparent;
-    outline: none;
-    width:4px;/*ドットボタンのサイズ*/
-    height:12px;/*ドットボタンのサイズ*/
-    display:block;
-    border-radius:50%;
-    background:#a6beb3;/*ドットボタンの色*/
-  }
-
-  .slick-dots .slick-active button{
-    background:#13623e;/*ドットボタンの現在地表示の色*/
-  }
 
   
 .balloon { /* アイコン */
@@ -233,7 +247,7 @@ h2{
   .balloon .faceicon img{
     width: 100%;
     height: auto;
-    border: solid 4px #c2dfd2;
+    border: solid 4px #e7e3db;
     border-radius: 50%;
   }
 
@@ -244,7 +258,7 @@ h2{
   margin: 5px 0 0 0;
   padding: 17px 13px;
   border-radius: 12px;
-  background: #c2dfd2;
+  background: #e7e3db;
   }
 
   .says:after {
@@ -254,7 +268,7 @@ h2{
     top: 18px;
     left: -24px;
     border: 12px solid transparent;
-    border-right: 12px solid #c2dfd2;
+    border-right: 12px solid #e7e3db;
   }
 
   .says h1 {
@@ -274,15 +288,15 @@ h2{
 /* monoiku.html==============================↓ */
 
 
-.box1{
+.box1{ 
   padding: 0.2em 0.5em;
   width: 600px;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 60px;
   text-align: center;
-  background: #a6beb3;
-  box-shadow: 0px 0px 0px 10px #a6beb3;
+  background: #e7e3db;
+  box-shadow: 0px 0px 0px 10px #e7e3db;
   border: dashed 3px white;
   }
 
@@ -292,7 +306,7 @@ h2{
     padding: 0.5em;/*文字周りの余白*/
     display: inline-block;/*おまじない*/
     line-height: 1.3;/*行高*/
-    background: #13623e;/*背景色*/
+    background: #5f4626;/*背景色*/
     vertical-align: middle;
     border-radius: 25px 0px 0px 25px;
     border: solid 2px white;
@@ -300,12 +314,12 @@ h2{
 
   .box1 h1:before {
     content: '●';
-    color: #a6beb3;
+    color: #e7e3db;
     margin-right: 8px;
   }
 
   .box1 h2{
-    color: #13623e;
+    color: #5f4626;
     font-size: 2.5rem;
     margin-bottom: 0;
   }
@@ -322,7 +336,7 @@ h2{
   }
 
 .btn{
-  background-color: rgb(84, 169, 194);
+  background-color: rgb(165, 133, 111);
   padding: 20px;
   color: white;
   text-decoration: none;
@@ -330,7 +344,7 @@ h2{
   font-size: 2.3rem;
   }
   .btn:hover{
-    background-color: #1b8b59;
+    background-color: #5f4626;
   }
 
   .btn-fin{
@@ -346,7 +360,7 @@ h2{
 
 
 .btn2{
-  background-color: rgb(84, 169, 194);
+  background-color: rgb(165, 133, 111);
   padding: 20px;
   color: rgb(255, 255, 255);
   text-decoration: none;
@@ -355,10 +369,15 @@ h2{
   }
 
   .btn2:hover{
-    background-color: #1b8b59;
+    background-color: #5f4626;
   }
 
 .point p {
+  font-size: 1.6rem;
+}
+
+p.red{
+  color: rgb(255, 0, 0);
   font-size: 1.6rem;
 }
 
@@ -367,7 +386,7 @@ h2{
 /* active.html==============================↓ */
 
 .mokuji{
-  background-color: #bce7d3;
+  background-color: #e7e3db;
   width: 40%;
   padding: 17px 8px;
   border-radius: 12px;
@@ -489,13 +508,13 @@ h2{
   margin-left: auto;
   margin-bottom: 60px;
   text-align: center;
-  background: #a6beb3;
-  box-shadow: 0px 0px 0px 10px #a6beb3;
+  background: #e7e3db;
+  box-shadow: 0px 0px 0px 10px #e7e3db;
   border: dashed 3px white;
   }
 
   .box2 h2{
-    color: #13623e;
+    color: #5f4626;
     font-size: 1.4rem;
   }
   
@@ -504,58 +523,60 @@ h2{
     letter-spacing: 0.08em
   }
 
-.balloon1 {
-  width: 100%;
-  margin: 1.3em 0;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  }
-
-
-  .balloon1 .faceicon1 {
-    width: 130px;
-    margin-right: 40px;
-  }
-
-  .balloon1 .faceicon1 img{
+/* 吹き出し */
+  .balloon1 {
     width: 100%;
-    height: auto;
-    border: solid 3px #d0ede0;
-    border-radius: 50%;
-  }
+    margin: 1.3em 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    }
 
-.says1 {
-  display: block;
-  width: 600px;
-  position: relative;
-  margin: 5px 0 0 0;
-  padding: 17px 14px 10px;
-  border-radius: 12px;
-  background: #d0ede0;
-  }
 
-  .says1:after {
-    content: "";
-    display: inline-block;
-    position: absolute;
-    top: 18px;
-    left: -24px;
-    border: 12px solid transparent;
-    border-right: 12px solid #d0ede0;
-  }
+    .balloon1 .faceicon1 {
+      width: 130px;
+      margin-right: 40px;
+    }
 
-  .says1 p {
-    margin: 0;
-    padding: 0;
-    font-size: 1.5rem;
-  }
+    .balloon1 .faceicon1 img{
+      width: 100%;
+      height: auto;
+      border: solid 3px #e7e3db;
+      border-radius: 50%;
+    }
 
-.mei{
-  padding-right: 10px;
-  text-align: right;
-  font-size: 1rem;
-}
+  .says1 {
+    display: block;
+    width: 600px;
+    position: relative;
+    margin: 5px 0 0 0;
+    padding: 17px 14px 10px;
+    border-radius: 12px;
+    background: #e7e3db;
+    }
+
+    .says1:after {
+      content: "";
+      display: inline-block;
+      position: absolute;
+      top: 18px;
+      left: -24px;
+      border: 12px solid transparent;
+      border-right: 12px solid #e7e3db;
+    }
+
+    .says1 p {
+      margin: 0;
+      padding: 0;
+      font-size: 1.5rem;
+    }
+
+    .mei{
+      padding-right: 10px;
+      text-align: right;
+      font-size: 1rem;
+    }
+
 
 
 
@@ -588,7 +609,7 @@ h2{
   padding: 3% 3% 3% 50px;
   margin: 3%;
   transition: all .5s ease;
-  background-color: #a6beb3;
+  background-color: #c5b9a2;
   }
 
   /*アイコンの＋と×*/
@@ -598,7 +619,7 @@ h2{
     content:'';
     width: 15px;
     height: 2px;
-    background-color: #13623e;
+    background-color: #5f4626;
   }
   .question::before{
     top:48%;
@@ -642,7 +663,7 @@ h2{
 }
 
 .caution{
-  background-color: rgb(255, 223, 154);
+  background-color: rgb(223, 190, 43);
   width: 70%;
   padding:  10px 20px 40px;
   margin: 20px auto;
@@ -658,6 +679,6 @@ h2{
 }
 
 h4{
-  color: rgb(250, 46, 46);
+  color: rgb(150, 26, 26);
   font-size: 1.3rem;
 }
