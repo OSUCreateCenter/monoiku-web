@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<body class="monoiku">
 <html lang="ja">
   <head>
     <meta charset="UTF-8">
@@ -6,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">    
     <link rel="stylesheet" href="css/style.css">
   </head>
-  <body>
+  <body.monoiku>
 
     <header>
       <a href="index.html"><h1>ものづくり育成プロジェクト</h1></a>
@@ -29,35 +30,53 @@
       </div>
 
       <br>
-      <h2>直近の開催内容</h2>
+      <h2>今回の開催内容</h2>
 
       <div class="box1">
-        <h1>2025年度　冬のものづくり教室</h1>
+        <h1>2026年度　夏のものづくり教室</h1>
         <h2>工作内容</h2>
-        <h3>
-          ふでばこ<br>
-          のぞきんこ（小型金庫）
-        </h3>
+        <div class="test">
+            <br>
+            <img src="img/monoiku-img/mono11.png" alt="">  <!--画像は270*270-->
+            <h3>木製ストラップ</h3>
+        </div>
         <h2>開催日時</h2>
-        <p>12/13(土)　10:00～13:00</p>
+        <p>7/18(土)<br>
+          午前の部　10：00 ～ 11：30<br>
+          午後の部　13：30 ～ 15：00<br>
+          いずれか1部のみ参加可能
+        </p>
         <h2>開催場所</h2>
-        <p>大阪産業大学　東キャンパス
-          <br>8号館　3階　<br>8201教室（ふでばこ）<br>8203教室（のぞきんこ）<br></p>
+        <p>大阪産業大学　東キャンパス　18号館
+            <br>午前の部　18号館 18604号室
+            <br>午後の部　18号館 18504号室
+        </p>
+          <a href="img/guidemap.pdf">  <!-- 開くPDF -->
+            <img src="img/guidemap.png" alt="">  <!--画像は270*270 -->
+          </a>
+        <p3><br>画像をタップするとPDFが開きます。</p3>
         <h2>対象者</h2>
-        <p>小学5,6年生・中学生</p>
+        <p>
+          小学生<br>
+        </p>
         <h2>定員</h2>
         <p>
-          ふでばこ：10名（中学生のみ応募可）<br>
-          のぞきんこ：15名<br>
+          午前の部　：45名<br>
+          午後の部　：45名<br>
         </p>
         <h2>応募期間</h2>
-        <p>10/28(火) 12：00 ～ 11/18(火) 12：00</p>
-        <h2>当選発表期間</h2>
-        <p>11/19(水)<br>
+        <p>5/8(金) 12：00(金) ～ 6/17(水) 12：00</p>
+        <h2>当選発表日</h2>
+        <p>
+          6/18(木)<br>
+          ※当選発表は当選された方のみにメールを送信させていただきます。
         </p>
         <h2>注意事項</h2>
 
         <div class="point">
+          <p>
+            応募者が定員を超えた場合抽選にて決定させていただきます。
+          </p>
           <p>
             ・迷惑メールを設定されている場合は、ドメイン「@yahoo.co.jp」を<br>
             指定受信設定にしてください。<br>
@@ -65,12 +84,11 @@
           <p>
             ・必ず保護者の同意を得てご応募してください<br>
           </p>
-          <p>
-            ・参加の際は原則保護者による送迎を<br>お願いいたします。<br>
+          <p class="red">
+            ・小学生の参加は送迎が必須です。<br>
+              送迎可能な方のみお申し込みください。
           </p>
-          <p>
-            ・いただいた個人情報は本「ものづくり教室」の<br>連絡・保険加入にのみ利用します。<br>
-          </p>
+
           <p>
             ・当日の様子を撮影しホームページ等に記載させて頂きますので
             あらかじめご了承ください。<br><br>
@@ -82,21 +100,23 @@
         </div>
 
 
-        
+
         <!-- ※注意点 -->
         <!-- 時期に合わせて“1つだけ”表示する！！！！(★の時期参考) -->
 
 
         <!-- ★応募開始前 -->
-        <!-- <div class="btn-fin">応募開始まで<br>しばらくお待ちください。</div><br><br><br> -->
+<!--         <div class="btn-fin">応募開始まで<br>しばらくお待ちください。</div><br><br><br> -->
          <!-- ★応募期間中 -->
         <!-- <a href="form.html" class="btn">応募する</a><br><br><br><br><br> -->
          <!-- ★応募期間終了 -->
-        <div class="btn-fin">ご応募ありがとうございました。</div><br><br><br>
+        <div class="btn-fin">ご応募ありがとうございました。</div><br><br><br> 
 
 
 
-        
+
+
+
         <!--aタグ　hrefのmailtoはクライアントデバイスが既定のメールアプリを設定していないと機能しないことに注意 調べていると現在は非推奨の機能とのこと-->
         <a href="mailto:monoikucraft@yahoo.co.jp?subject=もの育問い合わせメール" class="btn2">お問い合わせはメールからお願いします</a>
         
@@ -113,16 +133,5 @@
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="js/test.js"></script>
-  </body>
+  </body.monoiku>
 </html>
-
-
-
-
-
-
-
-
-
-
-
